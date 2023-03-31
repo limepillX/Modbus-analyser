@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script defer>
+    $(document).ready(function() {
+    document.getElementById('logs_block').innerHTML = '123'
+    });
+
+    </script>
+    <title>Логи</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Логи с контроллера</span>
+  </nav>
+
+  <table class="table table-dark container mt-5">
+  <thead>
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+
+    <pre class="container mt-5" id="logs_block"></pre>
+  </body>
+</html>
