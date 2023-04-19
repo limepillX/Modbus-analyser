@@ -6,7 +6,7 @@ import logging
 app = Flask(__name__)
 
 # Определите путь для файлов журнала
-log_file_path = '../temporary_logs'
+log_file_path = '../client/temporary_logs'
 
 
 @app.route('/')

@@ -17,6 +17,7 @@ class Parameter:
         self.loword = None
 
     def get_id(self, client):
+        print(client.read_holding_registers(256 + (self.number * 10)))
         self.id = hex(client.read_holding_registers(256 + (self.number * 10))[0])
         return self.id
 
@@ -79,8 +80,6 @@ def start_client():
         #         send_log(f'{curr.id} | {curr.loword} | {curr.loword}')
         #
         #     sleep(5)
-
-        n = 0
         for i in range(40):
             curr = Parameter(i)
             curr.get_id(client)
