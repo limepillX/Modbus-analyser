@@ -4,9 +4,9 @@ from loguru import logger
 
 
 class AlarmSounds(Enum):
-    DOWN = 'client/audios/down.wav',
-    UP = 'client/audios/up.wav',
-    PARAMETERS = 'client/audios/parameters.wav',
+    DOWN = 'client/audios/down.mp3',
+    UP = 'client/audios/up.mp3',
+    PARAMETERS = 'client/audios/parameters.mp3',
 
 
 class Alarm:
