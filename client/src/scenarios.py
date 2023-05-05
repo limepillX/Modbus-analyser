@@ -26,7 +26,7 @@ class Scenarios:
 
     def __get_scenarios(self):
         # TODO: Общение с бэкэндом
-        return Scenario.DOWN
+        return Scenario.UP
 
     def launch_scenarios(self):
         if self.__get_scenarios() == Scenario.DOWN:
@@ -60,7 +60,7 @@ class Scenarios:
         ]):
             self.timer.start(self.timer_delay)
             if self.timer.check():
-                Alarm.start('down scenario')
+                Alarm.test('down scenario')
 
         else:
             self.timer.stop()
@@ -95,7 +95,7 @@ class Scenarios:
             not self.__get_hook_load(),  # Отсутствует вес
             not self.__is_moving(),  # Нет движения
         ]):
-            Alarm.start('up scenario')
+            Alarm.test('up scenario')
 
         elif all([
             not self.__is_rotating(),  # Нет вращения

@@ -44,7 +44,7 @@ class Client:
                 logger.error(f'Не хватает {parameter}')
 
         if wrong_amount:
-            Alarm.start('wrong parameters amount')
+            Alarm.test('wrong parameters amount')
 
     def is_needed_parameter(self, current_parameter):
         if current_parameter.id in self.parameters_info.keys():
