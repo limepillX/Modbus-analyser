@@ -11,15 +11,18 @@ class AlarmSounds(Enum):
 
 class Alarm:
     @staticmethod
-    def test(num=None):
-        logger.error(f'Нарушение [{num}]')
+    def make_test(num: AlarmSounds):
+        logger.error(f'Нарушение [{num.name}]')
         logger.debug('Вызвана сигнализация')
 
-    def make_alarm(self, file_path):
+    @staticmethod
+    def make_alarm(file_path: AlarmSounds):
         import RPi.GPIO as GPIO
         import os
         import time
-        path_to_file = os.path.abspath(file_path)
+
+        logger.error(f'Нарушение [{file_path.name}]')
+        path_to_file = os.path.abspath(file_path.value[0])
 
         logger.debug(path_to_file)
         relay_pin = 23

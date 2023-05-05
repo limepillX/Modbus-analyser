@@ -1,7 +1,7 @@
 from enum import Enum
 from loguru import logger
 from client.src.timer import Timer
-from client.src.alarm import Alarm
+from client.src.alarm import Alarm, AlarmSounds
 
 
 class Scenario(Enum):
@@ -60,7 +60,7 @@ class Scenarios:
         ]):
             self.timer.start(self.timer_delay)
             if self.timer.check():
-                Alarm.test('down scenario')
+                Alarm.make_alarm(AlarmSounds.DOWN)
 
         else:
             self.timer.stop()
@@ -95,7 +95,7 @@ class Scenarios:
             not self.__get_hook_load(),  # Отсутствует вес
             not self.__is_moving(),  # Нет движения
         ]):
-            Alarm.test('up scenario')
+            Alarm.make_alarm(AlarmSounds.UP)
 
         elif all([
             not self.__is_rotating(),  # Нет вращения

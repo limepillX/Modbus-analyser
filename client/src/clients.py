@@ -3,7 +3,7 @@ from time import sleep
 from pyModbusTCP.client import ModbusClient
 from loguru import logger
 
-from client.src.alarm import Alarm
+from client.src.alarm import Alarm, AlarmSounds
 from client.src.parameters import Parameter, INFO
 from client.src.scenarios import Scenarios
 
@@ -44,7 +44,7 @@ class Client:
                 logger.error(f'Не хватает {parameter}')
 
         if wrong_amount:
-            Alarm.test('wrong parameters amount')
+            Alarm.make_alarm(AlarmSounds.PARAMETERS)
 
     def is_needed_parameter(self, current_parameter):
         if current_parameter.id in self.parameters_info.keys():
