@@ -1,7 +1,7 @@
 from enum import Enum
 from loguru import logger
-from client.src.timer import Timer
-from client.src.alarm import Alarm, AlarmSounds
+from .timer import Timer
+from .alarm import Alarm, AlarmSounds
 
 
 class Scenario(Enum):

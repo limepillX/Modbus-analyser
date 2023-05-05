@@ -1,8 +1,8 @@
 from time import sleep
 from loguru import logger
-from client.src.scenarios import Scenarios
+from src.scenarios import Scenarios
 
-TEST_FILE = 'test_up_alarm.csv'
+TEST_FILE = 'tests/test_up_alarm.csv'
 
 
 class Parameter:

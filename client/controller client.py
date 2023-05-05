@@ -1,8 +1,9 @@
 import os
-from client.src.clients import Client
+from src.clients import Client
 from loguru import logger
 from dotenv import load_dotenv
 
+load_dotenv()
 HOST = os.getenv('IP')
 PORT = os.getenv('PORT')
 

@@ -3,9 +3,9 @@ from time import sleep
 from pyModbusTCP.client import ModbusClient
 from loguru import logger
 
-from client.src.alarm import Alarm, AlarmSounds
-from client.src.parameters import Parameter, INFO
-from client.src.scenarios import Scenarios
+from .alarm import Alarm, AlarmSounds
+from .parameters import Parameter, INFO
+from .scenarios import Scenarios
 
 
 class Client:
